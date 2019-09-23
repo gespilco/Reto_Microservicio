@@ -73,15 +73,5 @@ public class CustomerController {
 		}
 		return new ResponseEntity<List<Customer>>(customers, HttpStatus.OK);	
 	}
-	
-    /*public static double desviacion ( int [ ] v ) {
-        double prom, sum = 0; int i, n = v.length;
-        prom = promedio ( v );
-
-        for ( i = 0; i < n; i++ ) 
-          sum += Math.pow ( v [ i ] - prom, 2 );
-
-        return Math.sqrt ( sum / ( double ) n );
-    }*/
     
 }
