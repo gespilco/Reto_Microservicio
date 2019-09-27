@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "7018c1da-b27b-467d-8e9a-970fdb53d116",
+		"name": "AWSGianCarlo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetCustomers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://reto3.us-east-1.elasticbeanstalk.com/customers",
+					"protocol": "http",
+					"host": [
+						"reto3",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://reto3.us-east-1.elasticbeanstalk.com/customers",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"age\": 20,\r\n\t\"birth\": \"1993-12-12\",\r\n\t\"lastName\": \"Carlo\",\r\n\t\"name\": \"Gian\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://reto3.us-east-1.elasticbeanstalk.com/customers",
+					"protocol": "http",
+					"host": [
+						"reto3",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://reto3.us-east-1.elasticbeanstalk.com/customers/statistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://reto3.us-east-1.elasticbeanstalk.com/customers/statistics",
+					"protocol": "http",
+					"host": [
+						"reto3",
+						"us-east-1",
+						"elasticbeanstalk",
+						"com"
+					],
+					"path": [
+						"customers",
+						"statistics"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
