@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://reto3.us-east-1.elasticbeanstalk.com/customers",
+					"raw": "http://reto3.us-east-1.elasticbeanstalk.com/customer-controller/listclientes",
 					"protocol": "http",
 					"host": [
 						"reto3",
@@ -20,7 +20,8 @@
 						"com"
 					],
 					"path": [
-						"customers"
+						"customer-controller",
+						"listclientes"
 					]
 				}
 			},
@@ -40,7 +41,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"age\": 20,\r\n\t\"birth\": \"1993-12-12\",\r\n\t\"lastName\": \"Carlo\",\r\n\t\"name\": \"Gian\"\r\n}",
+					"raw": "{\r\n\t\"age\": 20,\r\n\t\"birth\": \"1993-12-12\",\r\n\t\"lastName\": \"Castro\",\r\n\t\"name\": \"Luisa\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -48,7 +49,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://reto3.us-east-1.elasticbeanstalk.com/customers",
+					"raw": "http://reto3.us-east-1.elasticbeanstalk.com/customer-controller/creacliente",
 					"protocol": "http",
 					"host": [
 						"reto3",
@@ -57,7 +58,8 @@
 						"com"
 					],
 					"path": [
-						"customers"
+						"customer-controller",
+						"creacliente"
 					]
 				}
 			},
@@ -69,7 +71,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://reto3.us-east-1.elasticbeanstalk.com/customers/statistics",
+					"raw": "http://reto3.us-east-1.elasticbeanstalk.com/customer-controller/kpideclientes",
 					"protocol": "http",
 					"host": [
 						"reto3",
@@ -78,8 +80,8 @@
 						"com"
 					],
 					"path": [
-						"customers",
-						"statistics"
+						"customer-controller",
+						"kpideclientes"
 					]
 				}
 			},
