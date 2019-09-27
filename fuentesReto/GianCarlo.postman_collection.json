@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d33b30ea-9a0e-44ab-b9ba-2ada4957f892",
+		"_postman_id": "2bb24c7f-7e3b-475d-9115-dc6872dd9c77",
 		"name": "GianCarlo",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -12,19 +12,40 @@
 				"header": [
 					{
 						"key": "Content-Type",
-						"name": "Content-Type",
-						"value": "application/json",
-						"type": "text"
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"age\": 30,\r\n\t\"birth\": \"1995-12-12\",\r\n\t\"lastName\": \"Aguirre\",\r\n\t\"name\": \"Jorge\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
+					"raw": "{\r\n\t\"age\": 30,\r\n\t\"birth\": \"1995-12-12\",\r\n\t\"lastName\": \"Espilco\",\r\n\t\"name\": \"Giancarlo\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostCustomers - creacliente",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
 					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"age\": 30,\r\n\t\"birth\": \"1995-12-12\",\r\n\t\"lastName\": \"Espilco\",\r\n\t\"name\": \"Giancarlo\"\r\n}"
 				},
 				"url": {
 					"raw": "http://localhost:8080/customers",
@@ -45,6 +66,33 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomers - listclientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://localhost:8080/customers",
 					"protocol": "http",
@@ -64,6 +112,34 @@
 			"request": {
 				"method": "GET",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/statistics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"customers",
+						"statistics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetCustomers - kpideclientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"url": {
 					"raw": "http://localhost:8080/customers/statistics",
 					"protocol": "http",
@@ -79,6 +155,5 @@
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }

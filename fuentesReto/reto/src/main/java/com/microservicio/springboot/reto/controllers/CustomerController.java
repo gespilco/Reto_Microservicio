@@ -1,18 +1,12 @@
 package com.microservicio.springboot.reto.controllers;
 
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
-
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -23,12 +17,12 @@ import com.microservicio.springboot.reto.models.Customer;
 import com.microservicio.springboot.reto.services.ICustomerService;
 
 @RestController
-@RequestMapping("/customers")
+@RequestMapping("/customer-controller")
 public class CustomerController {
 	@Autowired
 	private ICustomerService microservice;
 
-	@PostMapping(produces = "application/json", consumes = "application/json")
+	@PostMapping(value = "/creacliente", produces = "application/json")
 	public ResponseEntity<?> create(@RequestBody Customer customer) {
 		Map<String, Object> response = new HashMap<>();
 		try {
@@ -41,7 +35,7 @@ public class CustomerController {
 		}
 	}
 	
-	@GetMapping("/statistics")
+	@GetMapping("/kpideclientes")
 	public ResponseEntity<?> averageDesviation() {
 
 		List<Customer> customers = microservice.getCustomers();
@@ -62,7 +56,7 @@ public class CustomerController {
 		
 	}
 	
-	@GetMapping
+	@GetMapping("/listclientes")
 	public ResponseEntity<?> customers() {
 		List<Customer> customers = microservice.getCustomers();
 		for (Customer customer : customers) {

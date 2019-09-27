@@ -1,0 +1,161 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "API que permite crear clientes, obtener la desviacion estandar y el promedio de edades de los clientes y fecha de muerte de los clientes ",
+    "version": "1.0.0",
+    "title": "Swagger Customers",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "gespilco@gmail.com"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "localhost",
+  "tags": [
+    {
+      "name": "customer",
+      "description": "Operaciones acerca de los cliente",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "http://localhost"
+      }
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/creacliente": {
+      "post": {
+        "tags": [
+          "creacliente"
+        ],
+        "summary": "Crea un cliente",
+        "description": "",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "customer",
+            "description": "Objeto del tipo Customer",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Customer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Exitoso",
+            "schema": {
+              "type": "object",
+              "items": {
+                "$ref": "#/definitions/Customer"
+              }
+            }
+          }
+        }
+      },
+    },
+      "/kpideclientes": {
+      "get": {
+        "tags": [
+          "kpideclientes"
+        ],
+        "summary": "kpideclientes",
+        "description": "Se obtiene la desviacion estandar y promedio de las edades de los clientes",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "items": {
+                "$ref": "#/definitions/CustomerAD"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/listclientes": {
+        "get": {
+        "tags": [
+          "listclientes"
+        ],
+        "summary": "listclientes",
+        "description": "Obtiene los clientes con su fecha de muerte",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "items": {
+                "$ref": "#/definitions/Customer"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "CustomerAD": {
+      "type": "object",
+      "properties": {
+        "average": {
+          "type": "number",
+          "format": "double"
+        },
+        "standardDeviation": {
+          "type": "number",
+          "format": "double"
+        }
+      }
+    },
+    "Customer": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "integer",
+          "format": "int64"
+        },
+        "name": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "age": {
+          "type": "integer"
+        },
+        "birth": {
+          "type": "string",
+          "format": "Date"
+        },
+        "deadDate": {
+          "type": "string",
+          "format": "Date"
+        }
+      }
+    }
+  },
+  "externalDocs": {
+    "description": "Find out more about Swagger",
+    "url": "http://swagger.io"
+  }
+}
